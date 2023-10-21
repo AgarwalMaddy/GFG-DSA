@@ -12,8 +12,6 @@ class GFG
         while(t-- > 0)
         {
             int N=sc.nextInt();
-			
-            
             Solution ob = new Solution();
             long ans  = ob.sumOfDivisors(N);
             System.out.println(ans);
@@ -28,13 +26,11 @@ class GFG
 class Solution{
     static long sumOfDivisors(int N){
         // code here
-        long resultSum = 0;
-        
-        for(int i = 1 ; i <= N ; i++){
-            resultSum += i * (N/i);
+        long sum = 0;
+        for(int i = 1; i <= N; i++){
+            sum += (N/i) * i; 
         }
         
-        return resultSum;
+        return sum;
     }
-    
 }
