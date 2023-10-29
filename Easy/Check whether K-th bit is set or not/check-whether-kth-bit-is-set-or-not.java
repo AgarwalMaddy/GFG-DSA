@@ -15,22 +15,12 @@ class CheckBit
     static boolean checkKthBit(int n, int k)
     {
         // Your code here
-         int[] binary = new int[35];
-        int id = 0;
-        
-        while(n>0)
-        {
-            binary[id++] = n%2;
-            n = n/2;
+        int bitShift = n >> k;
+        if((bitShift & 1) == 1){
+            return true;
         }
-        
-         for (int i = id - 1; i >= 0; i--)
-         {
-             if(binary[k]==1)
-                 return true;
-         }
-             return false;
-    }
+        return false;
+    } 
     
 }
 
